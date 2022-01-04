@@ -7,14 +7,14 @@
 }
 .hero-gallery {
   padding: 1rem;
-  background-color: var(--p_light);
+  background-color: rgb(255, 230, 0);
 }
 .hero-gallery > h1 {
   margin-top: 5%;
   text-align: center;
   color: white;
 }
-.shop-card {
+.shop-Hoteld {
   width: 100%;
   margin: 1rem 0;
   display: flex;
@@ -23,9 +23,9 @@
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 1em 1em 1em 2em;
-  border-left: 2px solid var(--p_green);
+
 }
-.shop-card:hover {
+.shop-Hoteld:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .shop-text-center {
@@ -63,30 +63,31 @@
   border-bottom: 1px solid var(--p_dark);
   cursor: pointer;
 }
-.car-gallery {
+.Hotel-gallery {
   width: 70%;
 }
-.car-gallery img {
+.Hotel-gallery img {
   width: 35%;
 }
-.car-data {
+.Hotel-data {
   width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.shop-card-img {
+.shop-Hoteld-img {
   width: 20em;
+  height: 20em;
 }
-.shop-card-label {
+.shop-Hoteld-label {
   color: var(--p_dark);
   font-size: 1.5em;
 }
-.shop-card-price {
+.shop-Hoteld-price {
   color: black;
   font-size: 1.4em;
 }
-.shop-card-btn {
+.shop-Hoteld-btn {
   background-color: var(--p_green);
   color: #fff;
   border: none;
@@ -95,8 +96,9 @@
   padding: 0.5em 1.5em;
   border-radius: 0.3em;
 }
-.shop-card-btn:hover {
-  background-color: var(--p_light);
+.shop-Hoteld-btn:hover {
+  background-color:rgb(255, 230, 0);
+  color: black;
   font-weight: bold;
 }
 
@@ -136,7 +138,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .shop-card {
+  .shop-Hoteld {
     flex-direction: column;
     align-items: center;
   }
@@ -147,7 +149,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .car-gallery {
+  .Hotel-gallery {
     width: 100%;
   }
   .categories-container {
@@ -163,10 +165,10 @@
     margin-right: 0.5rem;
     width: max-content;
   }
-  .car-gallery img {
+  .Hotel-gallery img {
     width: 50%;
   }
-  .car-data {
+  .Hotel-data {
     width: 50%;
   }
 }

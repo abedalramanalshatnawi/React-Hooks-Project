@@ -45,19 +45,19 @@ export class Footer extends Component {
             CATEGORIES
            
             <li className="Footer Items">
-            <NavLink className="directLink" to="/shop">Mercedes</NavLink>
+            <NavLink className="directLink" to="/shop">Baglioni Hotel</NavLink>
             </li>
             <li className="Footer Items">
-            <NavLink className="directLink" to="/shop">Audi</NavLink>
+            <NavLink className="directLink" to="/shop">Cadogan Gardens Hotel</NavLink>
             </li>
             <li className="Footer Items">
-            <NavLink className="directLink" to="/shop">Toyota</NavLink>
+            <NavLink className="directLink" to="/shop">Best Western Mornington Hotel</NavLink>
             </li>
             <li className="Footer Items">
-            <NavLink className="directLink" to="/shop">Mitsubishi</NavLink>
+            <NavLink className="directLink" to="/shop">The Langham Hotel</NavLink>
             </li>
             <li className="Footer Items">
-            <NavLink className="directLink" to="/shop">Fiat</NavLink>
+            <NavLink className="directLink" to="/shop">Park Plaza Westminster Bridge Hotel</NavLink>
             </li>
             </ul>
             </div>
@@ -94,6 +94,7 @@ export class Footer extends Component {
       </ul>
                 </div>
             </div>
+
         )
     }
 }

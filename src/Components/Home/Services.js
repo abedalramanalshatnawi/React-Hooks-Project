@@ -4,10 +4,10 @@ import "./Service.css";
 function Service (props) {
   const [state,setState] = useState([
             {
-              icon: "fas fa-shopping-cart",
+              icon: "fas fa-shopping-Hotelt",
               service: "Online Booking ",
       
-              description: "Add to your cart and you will receive it within 2 day",
+              description: "Add to your Hotelt and you will receive it within 2 day",
             },
             {
               icon: "fas fa-dollar-sign",
@@ -16,8 +16,8 @@ function Service (props) {
             },
             {
               icon: "fab fa-telegram",
-              service: "Find your car in any place",
-              description: "Find your car all around the world",
+              service: "Find your Hotel in any place",
+              description: "Find your Hotel all around the world",
             },
             {
               icon: "far fa-envelope",
@@ -29,13 +29,13 @@ function Service (props) {
           return (
             <div className="serviceContainer">
         {state.map((serv,index) => {
-          return (
-            <div className="serviceList" key={index}>
-              <i className={serv.icon} id="icons"></i>
-              <h2 className="service-title">{serv.service}</h2>
-              <p className="service-paragraph">{serv.description}</p>
-            </div>
-          );
+          // return (
+          //   <div className="serviceList" key={index}>
+          //     <i className={serv.icon} id="icons"></i>
+          //     <h2 className="service-title">{serv.service}</h2>
+          //     <p className="service-paragraph">{serv.description}</p>
+          //   </div>
+          // );
         })}
       </div>
     );

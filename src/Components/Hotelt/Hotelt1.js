@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import cars from "../Shop/cars.json";
-import Image from "../../Assets/cart/cart1.png";
+import Hotels from "../Shop/Hotels.json";
+import Image from "../../Assets/Hotelt/Hotelt1.png";
 import Hero from "../Hero/Hero";
-import "./cart1.css";
-import "./Cart.css";
+import "./Hotelt1.css";
+import "./Hotelt.css";
 import { useNavigate } from "react-router-dom";
 
-function Cart1() {
+function Hotelt1() {
   let navigate = useNavigate();
   let x = new Date();
   let y = new Date();
   y.setDate(y.getDate() + 7);
-  const [carId, setCarId] = useState(localStorage.getItem("selected"));
+  const [HotelId, setHotelId] = useState(localStorage.getItem("selected"));
   const [today, setToday] = useState(x.toISOString().split("T")[0]);
   const [maxDay, setMaxDay] = useState(y.toISOString().split("T")[0]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedDate2, setSelectedDate2] = useState(null);
   const [reserved, setReserved] = useState(
-    JSON.parse(localStorage.getItem(`car${carId}`))
+    JSON.parse(localStorage.getItem(`Hotel${HotelId}`))
   );
   const [item, setItem] = useState(localStorage.getItem("selected"));
 
@@ -36,8 +36,8 @@ function Cart1() {
       let index = my_array.indexOf(forDelete[date]);
       my_array.splice(index, 1);
     }
-    localStorage.setItem(`car${carId}`, JSON.stringify(my_array));
-    setReserved(JSON.parse(localStorage.getItem(`car${carId}`)));
+    localStorage.setItem(`Hotel${HotelId}`, JSON.stringify(my_array));
+    setReserved(JSON.parse(localStorage.getItem(`Hotel${HotelId}`)));
   }, []);
 
   const handleDate = (e) => {
@@ -77,18 +77,18 @@ function Cart1() {
       from.setDate(from.getDate() + 1);
     }
 
-    if (!localStorage.getItem(`car${carId}`)) {
+    if (!localStorage.getItem(`Hotel${HotelId}`)) {
       localStorage.setItem(`temp`, JSON.stringify(range_dates));
       alert("Done !");
       navigate("/checkout");
     } else {
-      let reserved_dates = JSON.parse(localStorage.getItem(`car${carId}`));
+      let reserved_dates = JSON.parse(localStorage.getItem(`Hotel${HotelId}`));
       let found = false;
-      let car_found = [];
+      let Hotel_found = [];
       for (let i in reserved_dates) {
         if (range_dates.indexOf(reserved_dates[i]) !== -1) {
           found = true;
-          car_found.push(reserved_dates[i]);
+          Hotel_found.push(reserved_dates[i]);
         }
       }
       if (!found) {
@@ -96,11 +96,11 @@ function Cart1() {
         alert("Done !");
         navigate("/checkout");
       } else {
-        alert(`car reserved in ${reserved_dates}`);
+        alert(`Hotel reserved in ${reserved_dates}`);
       }
     }
   };
-  const emptyCart = () => {
+  const emptyHotelt = () => {
     localStorage.removeItem("selected");
     setItem(null);
   };
@@ -108,10 +108,10 @@ function Cart1() {
   if (!item)
     return (
       <>
-        <Hero title="Cart Page" />
+        <Hero title="My Books" />
         <div className="empty-container">
-          <div className="title-cart">Your cart is currently empty</div>
-          <img src={Image} alt="empty cart" className="cart-img" />
+          <div className="title-Hotelt">No Books</div>
+          <img src={Image} alt="empty Hotelt" className="Hotelt-img" />
           <Link to="/shop">
             <button className="table-button3">Back to Gallery</button>
           </Link>
@@ -121,22 +121,22 @@ function Cart1() {
   else
     return (
       <>
-        <Hero title="Cart Page" />
-        <div className="cartCont">
-          <div id="selected_car">
+        <Hero title="My Books" />
+        <div className="HoteltCont">
+          <div id="selected_Hotel">
             <div>
-              <button type="button" id="removeCart" onClick={emptyCart}>
+              <button type="button" id="removeHotelt" onClick={emptyHotelt}>
                 <i className="far fa-times-circle fa-2x red"></i>
               </button>
             </div>
-            <div id="cart_image">
-              <img src={cars[carId - 1].img} alt="Car" />
+            <div id="Hotelt_image">
+              <img src={Hotels[HotelId - 1].img} alt="Hotel" />
             </div>
-            <div id="carDetailsMahdi">
+            <div id="HotelDetailshome1">
               <p>
-                {cars[carId - 1].name} {cars[carId - 1].model}
+                {Hotels[HotelId - 1].name} {Hotels[HotelId - 1].model}
               </p>
-              <p>{cars[carId - 1].price}$ Per day</p>
+              <p>{Hotels[HotelId - 1].price}$ Per day</p>
             </div>
             <form id="booking_Form" onSubmit={inquire}>
               <div className="formGroup">
@@ -160,12 +160,12 @@ function Cart1() {
                   required
                 />
               </div>
-              <button type="submit" id="submitButtonMahdi">
+              <button type="submit" id="submitButtonhome1">
                 <span>Book Now !</span>
               </button>
             </form>
           </div>
-          <div>
+          {/* <div>
             <h2>Reserved In : </h2>
             <div id="reservedIn">
               {reserved &&
@@ -173,11 +173,11 @@ function Cart1() {
                   return <p key={index}>{el}</p>;
                 })}
             </div>
-          </div>
-          <div></div>
+          </div> */}
+          
         </div>
       </>
     );
 }
 
-export default Cart1;
+export default Hotelt1;

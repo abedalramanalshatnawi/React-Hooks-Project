@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Hero from "../Hero/Hero";
-import cars from '../Shop/cars.json'
+import Hotels from '../Shop/Hotels.json'
 import './admin.css'
 
 function Submitted() {
@@ -14,7 +14,7 @@ return (
     {status&&status.map(
       (order, indx) => {
         return (
-          <div key={indx} className="orderCars">
+          <div key={indx} className="orderHotels">
             <div>
                 Full Name : 
                 {order.fname} {order.lname}
@@ -25,7 +25,7 @@ return (
             <div>
                Phone number :  {order.phone}
             </div>
-            <div>Car: {cars[order.carID-1].name} {cars[order.carID-1].model}</div>
+            <div>Hotel: {Hotels[order.HotelID-1].name} {Hotels[order.HotelID-1].model}</div>
             <div>Total: {order.total}</div>
             <div>Payment Method : {order.payment}</div>
           </div>

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './accounts.css';
 import tempMan from '../../Assets/accounts-assets/temp_man.jpg';
 import Hero from "../Hero/Hero";
-import cars from '../Shop/cars.json';
+import Hotels from '../Shop/Hotels.json';
 
 function Login(props) {
 
@@ -157,14 +157,14 @@ const badImage = (e)=>{
             </div>
             </div>
             <br/>
-          <div id="accountCarsWrapperMahdi">
+          <div id="accountHotelsWrapperhome1">
           {orders&&orders.map((order,index)=>{
             return (
-              <div id="selected_car_account">
+              <div id="selected_Hotel_account">
                 <div>
-                <img src={cars[order.carID-1].img} alt="my car" />
+                <img src={Hotels[order.HotelID-1].img} alt="my Hotel" />
                 </div>
-                <p>Car : {cars[order.carID-1].name} {cars[order.carID-1].model} - {cars[order.carID-1].year}</p>
+                <p>Hotel : {Hotels[order.HotelID-1].name} {Hotels[order.HotelID-1].model} - {Hotels[order.HotelID-1].year}</p>
                 <p>Pickup Duration : {order.pickup_Duration}</p>
                 <p>Pickup Time : {order.pickup_time}</p>
                 <p>Due Time : {order.until_time}</p>

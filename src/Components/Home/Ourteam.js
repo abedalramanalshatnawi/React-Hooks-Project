@@ -1,34 +1,34 @@
 import React from "react";
 import "./Ourteam.css";
-import zaid_pic from "../../Assets/team/im11.jpg";
-import aya_pic from "../../Assets/team/im10.webp";
-import tharaa_pic from "../../Assets/team/im1.jpg";
-import mahdi_pic from "../../Assets/team/im16.jpg";
-import shatnawi_pic from "../../Assets/team/im23.jpg";
+import z_pic from "../../Assets/team/im11.jpg";
+import a_pic from "../../Assets/team/im10.webp";
+import t_pic from "../../Assets/team/im1.jpg";
+import m_pic from "../../Assets/team/im16.jpg";
+import s_pic from "../../Assets/team/im23.jpg";
 function Team(props) {
   const ourTeam = [
     {
-      name: "Tharaa Ibrahim",
+      name: "t Ibrahim",
       title: "Product Owner",
-      image: tharaa_pic,
+      image: t_pic,
       class: "leftC",
     },
     {
-      name: "Aya Mohammad",
+      name: "a Mohammad",
       title: "Web Developer",
-      image: aya_pic,
+      image: a_pic,
       class: "rightC",
     },
     {
-      name: "Mahdi Suleiman",
+      name: "m Suleiman",
       title: "Web Developer",
-      image: mahdi_pic,
+      image: m_pic,
       class: "leftC",
     },
     {
-      name: "Abdelrahman Shatnawi",
+      name: "Abdelrahman s",
       title: "Web Developer",
-      image: shatnawi_pic,
+      image: s_pic,
       class: "leftC",
     },
   ];
@@ -55,16 +55,16 @@ function Team(props) {
               <div class="row align-items-md-center text-white text-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                   <div
-                    id="carouselExampleCaptions"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
+                    id="HotelouselExampleCaptions"
+                    class="Hotelousel slide"
+                    data-bs-ride="Hotelousel"
                   >
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
+                    <div class="Hotelousel-inner">
+                      <div class="Hotelousel-item active">
                         <div class="row p-4">
-                          {/* <div class="t-card">
+                          {/* <div class="t-Hoteld">
                             <img
-                              src={zaid_pic}
+                              src={z_pic}
                               alt="laptop hp"
                               style={{ width: "100%" }}
                             />
@@ -75,12 +75,12 @@ function Team(props) {
                               <div className={ourTeam[0].class}>
                                 <img
                                   width="100%"
-                                  src={zaid_pic}
+                                  src={z_pic}
                                   alt="Team Member"
                                   className="ourteam-img"
                                 />
                                 <div className="colNum2">
-                                  <h4>Zaid Samamah</h4>
+                                  <h4>z Samamah</h4>
                                   <p>Scrum Master</p>
                                   <a
                                     id="contactIcon"
@@ -108,9 +108,9 @@ function Team(props) {
                       </div>
                       {ourTeam.map((teamInfo, index) => {
                         return (
-                          <div id={index} class="carousel-item">
+                          <div id={index} class="Hotelousel-item">
                             <div class="row p-4">
-                              {/* <div class="t-card">
+                              {/* <div class="t-Hoteld">
                                 <img
                                   src={teamInfo.image}
                                   alt="laptop hp"
@@ -162,14 +162,14 @@ function Team(props) {
                   <div class="controls push-right">
                     <a
                       class="left fa fa-chevron-left btn btn-outline-black ps-3 pe-3"
-                      href="#carouselExampleCaptions"
+                      href="#HotelouselExampleCaptions"
                       data-bs-slide="prev"
                     >
                       {null}
                     </a>
                     <a
                       class="right fa fa-chevron-right btn btn-outline-black ps-3 pe-3"
-                      href="#carouselExampleCaptions"
+                      href="#HotelouselExampleCaptions"
                       data-bs-slide="next"
                     >
                       {null}

@@ -1,8 +1,8 @@
 .Nav.navContainer {
   display: flex;
   justify-content: space-between;
-  background-color: #f2fafe;
-  box-shadow: 1px 1px 12px #333333;
+  background-color: #000000;
+  box-shadow: 1px 1px 12px #000000;
   padding: 0 2em;
   position: sticky;
   top: 0;
@@ -69,14 +69,20 @@
 .menu {
   display: none;
   font-size: 2em;
-  color: var(--p_green);
+  color: white;
 }
 ul li > a.active {
   border-bottom: 1px solid var(--p_dark);
 }
 .Nav.navContainer ul li a {
-  color: unset;
   text-decoration: none;
+}
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+a:hover {
+  color: #fffd79;
 }
 .Nav.profileDropList,
 .toggle.profileDropList {

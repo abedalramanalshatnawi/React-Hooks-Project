@@ -7,13 +7,12 @@ function Intro() {
     <section className="Home">
       <div className="overlay">
         <div className="main">
-          <h1 className="intro-h">Exotic Car</h1>
+          <h1 className="intro-h">The Luxury Stay</h1>
           <p className="intro-p">
-            TRY <span className="intro-text">"a104"</span> COUPON WITH OUR CAR
-            RENTAL OFFERS JUST FOR YOU!
+            Use <span className="intro-text">"abd99"</span> COUPON TO GET 10%
+            OFF!
             <br />
-            Save 10% on your next daily or monthly car rental with these deals
-            and offers.
+            Reserve for Jan. 2022 through our websit and get our copoun.
           </p>
           <Link to="/shop">
             <button className="intro-button">View Gallery</button>

@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./checkout.css";
 import Hero from "../Hero/Hero";
-import Image from "../../Assets/cart/cart.png";
-import cars from "../Shop/cars.json";
+import Image from "../../Assets/Hotelt/Hotelt.png";
+import Hotels from "../Shop/Hotels.json";
 
 export default function Checkout() {
   let navigate = useNavigate();
   const loggedIn = localStorage.getItem("logged_in")
     ? JSON.parse(localStorage.getItem("logged_in"))
     : { fname: "", lname: "", email: "", phone: "" };
-  const mycar = cars[localStorage.getItem("selected") - 1];
+  const myHotel = Hotels[localStorage.getItem("selected") - 1];
 
   useEffect(() => {
     if (!localStorage.getItem("logged_in")) {
@@ -30,7 +30,7 @@ export default function Checkout() {
     redirect: null,
   });
 
-  const [coupon, setCoupon] = useState("a104");
+  const [coupon, setCoupon] = useState("abd99");
   const [couponHandler, setCouponHandler] = useState(null);
   const [discount, setDiscount] = useState(0);
 
@@ -58,7 +58,7 @@ export default function Checkout() {
 
   const totalPrice = () => {
     let days = JSON.parse(localStorage.getItem("temp"));
-    subtotal = mycar.price * days.length;
+    subtotal = myHotel.price * days.length;
     return subtotal;
   };
 
@@ -72,10 +72,10 @@ export default function Checkout() {
     const checkoutInfo = {
       fname: userData.fname,
       lname: userData.lname,
-      payment: userData.cashMsg1 === "flex" ? "Cash" : "Credit Card",
+      payment: userData.cashMsg1 === "flex" ? "Cash" : "Credit Hoteld",
       phone: userData.phone,
       email: userData.email,
-      carID: localStorage.getItem("selected"),
+      HotelID: localStorage.getItem("selected"),
       pickup_Duration: `${duration[0]} : ${duration[duration.length - 1]}`,
       pickup_time: userData.pickup_time,
       until_time: userData.until_time,
@@ -90,13 +90,13 @@ export default function Checkout() {
       localStorage.setItem("submittedOrders", JSON.stringify([checkoutInfo]));
     }
 
-    let dates = JSON.parse(localStorage.getItem(`car${mycar.id}`));
+    let dates = JSON.parse(localStorage.getItem(`Hotel${myHotel.id}`));
     let new_dates = JSON.parse(localStorage.getItem("temp"));
     if (!dates) {
-      localStorage.setItem(`car${mycar.id}`, JSON.stringify(new_dates));
+      localStorage.setItem(`Hotel${myHotel.id}`, JSON.stringify(new_dates));
     } else {
       let new_array = [...dates, ...new_dates];
-      localStorage.setItem(`car${mycar.id}`, JSON.stringify(new_array));
+      localStorage.setItem(`Hotel${myHotel.id}`, JSON.stringify(new_array));
     }
 
     localStorage.removeItem("selected");
@@ -128,7 +128,7 @@ export default function Checkout() {
         <>
           <Hero title="Checkout Page" />
           <div className="empty-container">
-            <div>Your car is rented successfully !</div>
+            <div>Your Hotel is rented successfully !</div>
             <Link to="/shop">
               <button className="table-button3">Back to Gallery</button>
             </Link>
@@ -247,17 +247,17 @@ export default function Checkout() {
                       value="cash"
                       defaultChecked
                     />
-                    <label htmlFor="cash">Cash on delivery</label>
+                    <label htmlFor="cash">Cash</label>
                   </div>
                   <div className="radios">
                     <input
                       onChange={handlePayment}
                       type="radio"
                       name="method"
-                      id="credit-cards"
-                      value="credit-cards"
+                      id="credit-Hotelds"
+                      value="credit-Hotelds"
                     />
-                    <label htmlFor="credit-cards">Credit Card</label>
+                    <label htmlFor="credit-Hotelds">Credit Card</label>
                   </div>
                   <div className="payment-msg-container1">
                     <div
@@ -266,14 +266,14 @@ export default function Checkout() {
                       style={{ display: userData.cashMsg2 }}
                     >
                       <label>
-                        <p>Card Number</p>
+                        <p>Hoteld Number</p>
                         <input
                           type="number"
                           placeholder="xxxx-xxxx-xxxx-xxxx"
                         ></input>
                       </label>
                       <label>
-                        <p>Name on card</p>
+                        <p>Name on Hoteld</p>
                         <input type="text" placeholder="First Last"></input>
                       </label>
                       <label>
@@ -296,8 +296,8 @@ export default function Checkout() {
         <>
           <Hero title="Checkout Page" />
           <div className="empty-container">
-            <div className="title-cart">Your cart is currently empty</div>
-            <img src={Image} alt="empty cart" className="cart-img" />
+            <div className="title-Hotelt">Your Hotelt is currently empty</div>
+            <img src={Image} alt="empty Hotelt" className="Hotelt-img" />
             <Link to="/shop">
               <button className="table-button3">Back to Gallery</button>
             </Link>

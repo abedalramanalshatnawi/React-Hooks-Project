@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ayaNav.css";
+import "./home2Nav.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import Logo from "../../logoNav2.png";
@@ -8,7 +8,7 @@ export default function HandleLogout() {
   let navigate = useNavigate();
   const handleLogoutClick = () => {
     localStorage.removeItem("currentUser");
-    localStorage.setItem("cartKey", JSON.stringify([]));
+    localStorage.setItem("HoteltKey", JSON.stringify([]));
     navigate("/");
   };
   return <Nav handleLogoutClick={handleLogoutClick} />;
@@ -82,7 +82,7 @@ function Nav() {
             <NavLink to="/shop">Gallery</NavLink>
           </li>
           <li className={state.class1}>
-            <NavLink to="/cart">Cart</NavLink>
+            <NavLink to="/Hotelt">Resevations</NavLink>
           </li>
           <li className={state.class1}>
             <NavLink to="/account">{isLogged}</NavLink>

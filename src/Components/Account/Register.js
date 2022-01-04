@@ -165,7 +165,7 @@ function Register() {
           <fieldset id="register-fieldset">
             <form onSubmit={handleSubmit}>
               <div id="register-form">
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="fname">
                     First Name : <span className="accounts-important">*</span>{" "}
                   </label>
@@ -173,26 +173,26 @@ function Register() {
                   <input
                     type="text"
                     id="fname"
-                    placeholder="Zaid"
+                    placeholder="Abd Al-Rahman"
                     onChange={validator}
                     required
                   />
                   <p className="error" id="RU-fname"></p>
                 </div>
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="lname">
                     Last Name : <span className="accounts-important">*</span>{" "}
                   </label>
                   <input
                     type="text"
                     id="lname"
-                    placeholder="Samamah"
+                    placeholder="Alshatnawi"
                     onChange={validator}
                     required
                   />
                   <p className="error" id="RU-lname"></p>
                 </div>
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="country">
                     Country : <span className="accounts-important">*</span>
                   </label>
@@ -211,7 +211,7 @@ function Register() {
                     })}
                   </select>
                 </div>
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="phone">
                     Phone Number : <span className="accounts-important">*</span>
                   </label>
@@ -226,12 +226,12 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="img-url">Profile Image : </label>
 
                   <input type="url" id="img-url" onChange={validator} />
                 </div>
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="email">
                     Email Address :{" "}
                     <span className="accounts-important">*</span>
@@ -245,7 +245,7 @@ function Register() {
                     required
                   />
                 </div>
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="password">
                     Password : <span className="accounts-important">*</span>
                   </label>
@@ -259,7 +259,7 @@ function Register() {
                   />
                   <p className="error" id="RU-password"></p>
                 </div>
-                <div className="formGroupRegisterMahdi">
+                <div className="formGroupRegisterhome1">
                   <label htmlFor="repassword">
                     Repeat Password :{" "}
                     <span className="accounts-important">*</span>
@@ -274,11 +274,11 @@ function Register() {
                   <p className="error" id="RU-repassword"></p>
                 </div>
               </div>
-              <div className="formGroupRegisterMahdi">
+              <div className="formGroupRegisterhome1">
                 <button type="submit" className="accounts-form-btn">
                   Register
                 </button>
-                <Link to="/account" id="redirect-to-login-mahdi">
+                <Link to="/account" id="redirect-to-login-home1">
                   Already Have an account? Sign in here!
                 </Link>
               </div>

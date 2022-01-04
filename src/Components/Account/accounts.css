@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(3, 169, 244, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 #register_heading{
   text-align: center;
@@ -20,7 +20,7 @@ body {
   width: 100%;
 }
 fieldset a {
-  color: rgb(70, 196, 255);
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 #login-form > div {
@@ -60,7 +60,7 @@ fieldset a {
 .accounts-form-btn {
   border: none;
   display: block;
-  /* margin-bottom: 0.5em; */
+  
   border-radius: 0.2em;
   font-size: 1.2em;
   padding: 0.5em 2em;
@@ -167,15 +167,15 @@ fieldset a {
 }
 .a-login {
   text-align: center;
-  color: var(--p_light);
+  color: var(--p_green);
 
 }
 
-#redirect-to-login-mahdi{
-  color: var(--p_light);
+#redirect-to-login-home1{
+  color: black;
 }
 
-.formGroupRegisterMahdi{
+.formGroupRegisterhome1{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,32 +187,35 @@ fieldset a {
  #reservedIn{
    text-align: center;
  }
-#accountCarsWrapperMahdi{
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  flex-wrap: wrap;
+#accountHotelsWrapperhome1{
+  display: grid;
+  grid-gap: 3em;
+  grid-template-areas: "selected_Hotel_account selected_Hotel_account"
+  "selected_Hotel_account  selected_Hotel_account";
   width: 80%;
   margin: 0 auto;
 }
- #selected_car_account{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+ #selected_Hotel_account{
+ display: grid;
+  grid-template-columns: 1fr;
   gap: 0.5em;
-  box-shadow: 0px 0px 8px rgba(44, 43, 43, 0.2);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
   width: 40%;
   width: 500px;
   margin: 1em auto;
   padding: 0.5em;
+  padding-top: 2em;
   background-color: #fff;
   text-align: center;
 }
-#selected_car_account img{
-  width: 100%;
+#selected_Hotel_account img{
+  width: 70%;
+
 }
+
+
+
 
 @media only screen and (max-width: 480px) {
   #remember-me-container {
@@ -228,7 +231,7 @@ fieldset a {
   }
   .btn-login button {
     margin: 0 auto;
-    /* width: 50%; */
+    
   }
   .a-login {
     text-align: center;
@@ -248,7 +251,7 @@ fieldset a {
 
 
 
-  .formGroupRegisterMahdi{
+  .formGroupRegisterhome1{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -261,7 +264,40 @@ fieldset a {
 
 }
 
-@media only screen and (max-width: 769px){
+@media only screen and (max-width:1300px ){
 
+#accountHotelsWrapperhome1{
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
 } 
+
+
+@media only screen and (max-width:600px ){
+
+  #selected_Hotel_account{
+
+  width:50%;
+    
+  
+  }
+
+
+  #selected_Hotel_account img{
+
+    width: 40%;
+
+  }
+
+  p {
+    font-size: x-small;
+
+  }
+
+
+
+
+  } 

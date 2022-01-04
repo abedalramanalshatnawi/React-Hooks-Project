@@ -18,13 +18,14 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .Home {
-  background-image: url("../../Assets/background_image/banner-bg.jpg");
+  background:linear-gradient(rgba(68, 68, 68, 0.5), rgba(68, 68, 68, 0.5)), url("../../Assets/background_image/banner-bg.jpg" );
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
 }
+
 .overlay {
   margin: 0 auto;
   text-align: center;
@@ -48,7 +49,7 @@ body {
 }
 
 .intro-p {
-  color: var(--body_text);
+  color: var(--widgets);
   font-size: 1.5em;
   animation-duration: 3s;
   animation-name: slidein;
@@ -80,7 +81,7 @@ body {
 .intro-button {
   padding: 0.5em 1em;
   border-radius: 1.5em;
-  background-color: var(--p_light);
+  background-color: var(--s_light);
   color: var(--body_text);
   font-weight: bold;
   width: fit-content;
@@ -89,7 +90,7 @@ body {
 }
 
 .intro-button:hover {
-  background-color: var(--s_light);
+  background-color: var(--s_teal);
   color: var(--p_dark);
   transition: background-color 400ms linear;
 }

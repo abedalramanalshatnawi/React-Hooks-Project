@@ -2,15 +2,15 @@ import React from 'react';
 import Testimonial from './Testimonials';
 import Intro from './Intro.js';
 import Service from './Services';
-import Slider from './Slider';
-
+import ImageSlider from '../slider_img/slider_img';
+import { SliderData } from '../slider_img/SliderData';
 export default function Home (){
 
         return (
             <div className="homePageContainer">
                 <Intro />
                 <Service />
-                <Slider />
+                <ImageSlider slides={SliderData} />
                 <Testimonial />
             </div>
         )

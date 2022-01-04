@@ -12,23 +12,25 @@
   color: var(--body_text);
   background-image: linear-gradient(to right, var(--p_light) , var(--s_dark));
   align-items: center;
-  box-shadow: 20em rgba(0, 0, 0, 0.1);
+  box-shadow: 20em rgba(255, 255, 255, 0.1);
   text-align: center;
   padding: 1em;
   margin: 1em;
-  box-shadow:  0em 1em 2em 0em rgba(128, 128, 128, 0.514);
+  box-shadow:  0em 1em 2em 0em rgba(218, 218, 218, 0.514);
   border-radius: 0.6em;
+  border: 4mm ridge rgba(0, 0, 0, 0.6);
 }
 .people .img {
   width: 110px;
-  border-radius: 50%;
+  border-radius: 30%;
   height: 110px;
   position: relative;
-  top: -3em;
+  margin-bottom: 1em;
 
 }
 .people h4 {
   font-size: 1.8em;
+  
 }
 .testimonials {
   display: flex;
@@ -39,6 +41,7 @@
 }
 
 .testimonials-p {
+  
   font-size: 0.8em;
   margin: 0.8em;
   line-height: 2;

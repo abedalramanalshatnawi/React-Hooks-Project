@@ -61,7 +61,7 @@
 .checkout-summary table,
 .checkout-summary td {
   width: 100%;
-  border: 1px solid var(--p_light);
+  border: 1px solid var(--p_green);
   padding: 0.2em 0.5em;
 }
 
@@ -126,14 +126,15 @@
 }
 
 #placeOrder {
-  background-color: var(--p_light);
+  background-color: black;
   color: white;
   border-radius: 0.5em;
   padding: 0.7em 1em;
   border-style: none;
 }
 #placeOrder:hover {
-  background-color: var(--p_green);
+  background-color:#fffd79 ;
+  color: black;
 }
 
 @media only screen and (max-width: 800px) {
